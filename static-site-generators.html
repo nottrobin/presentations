@@ -1,0 +1,386 @@
+---
+title: Static site generators
+author: Robin Winslow
+layout: presentation
+---
+
+<section class="slide">
+    <h1>Me</h1>
+
+    <ul>
+        <li><a href="http://twitter.com/nottrobin">@nottrobin</a> - <a href="http://robinwinslow.co.uk">robinwinslow.co.uk</a></li>
+        <li>Front- and back-end developer - @ <a href="http://hillarys.co.uk">Hillarys</a></li>
+        <li>Really quite fussy about markup</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h1>Static site generators are</h1>
+
+    <ul>
+        <li class="icon-simple">Simple</li>
+        <li class="icon-sensible">Sensible</li>
+        <li class="icon-empowering">Empowering</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h1>Consider static site generators for</h1>
+
+    <ul>
+        <li>Blogs</li>
+        <li>News sites</li>
+        <li>Brochure sites</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h1>Static site generators suck at</h1>
+
+    <ul>
+        <li>Forums</li>
+        <li>Wikis (maybe)</li>
+        <li>Social networking</li>
+        <li>Membership permissions</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h1>How would you start a blog?</h1>
+
+    <ul>
+        <li class="icon-tumblr icon-wordpress-com">Hosted solutions</li>
+        <li class="icon-wordpress-oss icon-drupal">Custom solutions</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h1>Classic website structure</h1>
+
+    <img BROSWER-ADDRESS-BAR-DIAGRAM (robinwinslow.co.uk/an-article) />
+
+    <p>CAN HAZ HTML -></p>
+
+    <p><- HEREZ HTMLz</p>
+
+    <p>Server -> Program -> Files -> Database</p>
+
+</section>
+
+<section class="slide">
+    <h1>Classic blog interface</h1>
+
+    <p>WORDPRESS ADMIN AREA</p>
+
+    <p>WYSIWYG IMAGE</p>
+</section>
+
+<section class="slide">
+    <h1>Problems</h1>
+
+    <ul>
+        <li>Needs a developer (keeps me in a job)</li>
+        <li>WYSIWYG makes a mess</li>
+        <li>Complex problems</li>
+        <li>Potential security holes</li>
+        <li>Gets slow (needs caching etc.)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h1>
+        <small>Alternative</small>
+        Static site - flat files
+    </h1>
+
+    <img BROWSER-ADDRESS-BAR-DIAGRAM (robinwinslow.co.uk/an-article) />
+
+    <p>CAN HAZ HTML -></p>
+    <p><- heryago</p>
+
+    <p>Server -> Read an-article.html</p>
+</section>
+
+<section class="slide">
+    <h1>Strengths</h1>
+
+    <ul>
+        <li class="icon-secure">Secure</li>
+        <li class="icon-fast">Fast</li>
+        <li class="icon-simple">Simple</li> <!-- To work with; to cache -->
+    </ul>
+</section>
+
+<section class="slide">
+    <h1>Problemz?</h1>
+
+    <ul>
+        <li>HTML</li>
+        <li>Repetition (not DRY)</li>
+        <li>No automated lists</li>
+        <li>No distribution</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h1>Jekyll</h1>
+
+    <ul>
+        <li class="icon-markdown">Markdown</li>
+        <li class="icon-templates">Templates</li>
+        <li class="icon-index">Article indexing</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h1>
+        <small>Jekyll</small>
+        Basics
+    </h1>
+
+    <p>_config.yml -> (ignored)</p>
+
+    <p>css/default.css -> _site/css/default.css (unchanged)</p>
+
+    <p>index.md -> _site/index.html</p>
+</section>
+
+<section class="slide">
+    <h1>
+        <small>Jekyll</small>
+        Markdown
+    </h1>
+
+    <code>
+        Markdown
+        ===
+
+        A **simple**, readable way to write documents that translate directly into HTML.
+
+        > Everything should be made as simple of possible, but not simpler
+
+        *Albert Einstein*
+    </code>
+
+-->
+
+    <code>
+        <h1>Markdown</h1>
+
+        <p>A <strong>simple</strong>, readable way to write documents that translate directly into HTML.</p>
+
+        <blockquote>Everything should be made as simple as possible, but not simpler</blockquote>
+
+        <em>Albert Einstein</em>
+    </code>
+</section>
+
+<section class="slide">
+    <h1>
+        <small>Jekyll</small>
+        Templates
+    </h1>
+
+    <section class="left">
+        <h1 class="code">_layouts/default.html</h1>
+
+        <code>
+            <html>
+                <head>
+                    <title>{{ page.title }}</title>
+                </head>
+
+                <body>
+                    <h1>{{ page.title }}</h1>
+
+                    {{content}}
+                </body>
+            </html>
+        </code>
+
+        <h2 class="code">_includes/about-me.html</h2>
+
+        <code>
+            <p>I'm a web developer</p>
+        </code>
+
+        <h2 class="code">index.html</h2>
+
+        <code>
+            ---
+            layout: default
+            title: "My blog"
+            ---
+            <p>Welcome to my blog</p>
+
+            {% include about-me.html %}
+        </code>
+    </section>
+
+    <section class="right">
+        <h1 class="code">_side/index.html</h1>
+        <code>
+            <html>
+                <head>
+                    <title>My blog</title>
+                </head>
+
+                <body>
+                    <h1>My blog</h1>
+
+                    <p>Welcome to my blog</p>
+
+                    <p>I'm a web developer</p>
+                </body>
+            </html>
+        </code>
+    </section>
+</section>
+
+<section class="slide">
+    <h1>Posts</h1>
+
+    <section class="left">
+        <h1 class="code">index.html</h1>
+
+        <code>
+            ---
+            layout: default
+            title: "My blog"
+            ---
+
+            <ul>
+            {% for post in site.posts %}
+                <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+            {% endfor %}
+            </ul>
+        </code>
+
+        <h1 class="code">_posts/2013-10-09-my-first-post.md</h1>
+<!-- This is all editors will have to worry about -->
+
+        <code>
+            ---
+            layout: default
+            title: "My first post"
+            ---
+
+            This is my *very first* post.
+
+            It's quite short...
+        </code>
+    </section>
+
+    <section class="right">
+        <h1 class="code">_site/index.html</h1>
+
+        <code>
+            <html>
+                <head>
+                    <title>My blog</title>
+                </head>
+
+                <body>
+                    <h1>My blog</h1>
+
+                    <ul>
+                        <li><a href="/2013/10/09/my-first-post.html">My first post</a></li>
+                    </ul>
+                </body>
+        </code>
+
+        <h1 class="code">_site/2013/10/09/my-first-post.html</h1>
+
+        <code>
+            <html>
+                <head>
+                    <title>My first post</title>
+                </head>
+
+                <body>
+                    <h1>My first post</h1>
+
+                    <p>This is my <em>very first</em> post.</p>
+
+                    <p>It's quite short...</p>
+                </body>
+            </html>
+        </code>
+    </section>
+</section>
+
+<section class="slide">
+    <h1>A site!</h1>
+
+    <ul>
+        <li>_site = a whole blog site!</li>
+        <li>Put it anywhere, copy it, share, it</li>
+    </ul>
+
+    <!-- If you're working by yourself, this tutorial can end here. You have a site, in a folder, that you can put anywhere. -->
+</section>
+
+<section class="slide">
+    <h1>Distribution problems</h1>
+
+    <ul>
+        <li>Merge with others</li>
+        <li>Non-techies?</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h1>Version control</h1>
+
+    <ul>
+        <li></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h1></h1>
+
+    <ul>
+        <li></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h1></h1>
+
+    <ul>
+        <li></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h1></h1>
+
+    <ul>
+        <li></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h1></h1>
+
+    <ul>
+        <li></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h1></h1>
+
+    <ul>
+        <li></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h1></h1>
+
+    <ul>
+        <li></li>
+    </ul>
+</section>
