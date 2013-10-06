@@ -5,9 +5,30 @@
         <meta charset="utf-8">
 
         <title>{{ page.title }} | Presentation</title>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="deck.core.js"></script>
+        <script src="deck.goto.js"></script>
+
+        <link rel="stylesheet" href="deck.core.css" />
+        <link rel="stylesheet" href="deck.goto.css" />
+
+        <style>
+            body {
+                margin: 0;
+                overflow: hidden;
+                position: relative;
+            }
+
+            .slide {
+                overflow: hidden;
+                width: 100%;
+                background-color: white;
+            }
+        </style>
     <head>
 
-    <body>
+    <body class="deck-container">
         {{ content }}
     </body>
 </html>
