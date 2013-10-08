@@ -4,15 +4,19 @@ author: Robin Winslow
 layout: presentation
 ---
 
+<section class="slide" id="0-intro">
+    <h1 class="title">Static Site Generators</h1>
+    <p class="alongside">For neat &amp; simple websites</p>
+</section>
+
 <section class="slide" id="1-me">
     <h1>Me</h1>
 
-    <ul class="duo alongside">
-        <li class="icon-twitter"><a href="http://twitter.com/nottrobin">@nottrobin</a></li>
-        <li class="icon-home"><a href="http://robinwinslow.co.uk">robinwinslow.co.uk</a></li>
-    </ul>
 
-    <ul class="duo">
+    <p class="alongside big"><a href="mailto:robin@robinwinslow.co.uk"><span class="subtle">robin@</span></a><a href="http://robinwinslow.co.uk">robinwinslow.co.uk</a></p>
+
+    <ul class="trio">
+        <li class="icon-twitter"><a href="http://twitter.com/nottrobin">@nottrobin</a></li>
         <li class="icon-building">Dev @ <a href="http://hillarys.co.uk">Hillarys</a></li>
         <li class="icon-code">I like markup</li>
     </ul>
@@ -62,7 +66,7 @@ layout: presentation
 </section>
 
 <section class="slide" id="6-custom-software">
-    <h1>Custom software</h1>
+    <h1>Blogging software</h1>
 
     <ul class="trio biggish">
         <li><img class="img-icon" src="images/wordpress-pen.png" /> Wordpress</li>
@@ -119,7 +123,7 @@ layout: presentation
     &lt;/body&gt;
 &lt;/html&gt;</code>
         </li>
-        <li><img src="images/simple-files.png" /></li>
+        <li style="margin-top: -1em"><img src="images/simple-files.png" /></li>
     </ul>
 </section>
 
@@ -147,277 +151,255 @@ layout: presentation
 <section class="slide" id="12-answer-a-generator">
     <h1>Answer? A generator!</h1>
 
-    
-</section>
-
-<section class="slide">
-    <h1>Jekyll</h1>
-
-    <ul>
-        <li class="icon-markdown">Markdown</li>
-        <li class="icon-templates">Templates</li>
-        <li class="icon-index">Article indexing</li>
+    <ul class="trio progression biggish">
+        <li class="icon-file">Templates</li>
+        <li class="icon-cloud">Generator</li>
+        <li class="icon-folder-close">Static site</li>
     </ul>
 </section>
 
-<section class="slide">
+<section class="slide" id="13-jekyll">
+    <h1><a href="http://jekyllrb.com"><img src="images/jekyll-logo.png" style="height: 1.5em; margin: -0.3em 0" /></a></h1>
+
+    <ul class="trio biggish">
+        <li><img class="img-icon" src="images/markdown-logo.png" />Markdown</li>
+        <li class="icon-file">Templates</li>
+        <li class="icon-th-list">Article indexing</li>
+    </ul>
+</section>
+
+<section class="slide" id="14-jekyll-basics">
     <h1>
-        <small>Jekyll</small>
+        <a href="http://jekyllrb.com"><img src="images/jekyll-logo.png" style="height: 1em; margin: -0.1em 0" /></a>
         Basics
     </h1>
 
-    <p>_config.yml -> (ignored)</p>
-
-    <p>css/default.css -> _site/css/default.css (unchanged)</p>
-
-    <p>index.md -> _site/index.html</p>
+    <ul class="duo biggish loose progression">
+        <li class="icon-folder-close-alt container-icon">
+            <h2>project/</h2>
+            <p>article.md</p>
+            <p>default.css</p>
+        </li>
+        <li class="icon-folder-close-alt container-icon">
+            <h2>project/_site/</h2>
+            <p>article.html</p>
+            <p>default.css</p>
+        </li>
+    </ul>
 </section>
 
-<section class="slide">
+<section class="slide" id="15-jekyll-markdown">
     <h1>
-        <small>Jekyll</small>
+        <a href="http://jekyllrb.com"><img src="images/jekyll-logo.png" style="height: 1em; margin: -0.1em 0" /></a>
         Markdown
     </h1>
 
-    <code>
-        Markdown
-        ===
+    <ul class="duo biggish closer progression">
+        <li>
+            <code>Markdown
+===
 
-        A **simple**, readable way to write documents that translate directly into HTML.
+A **simple**, readable way to write
+documents that translate directly
+into HTML.
 
-        > Everything should be made as simple of possible, but not simpler
+> Everything should be made as
+> simple as possible, but not simpler
 
-        *Albert Einstein*
-    </code>
+*Albert Einstein*</code>
+        </li>
+        <li>
+            <code  class="prettyprint">&lt;h1&gt;Markdown&lt;/h1&gt;
 
--->
+&lt;p&gt;
+    A &lt;strong&gt;simple&lt;/strong&gt;, readable
+    way to write documents that translate directly
+    into HTML.
+&lt;/p&gt;
 
-    <code>
-        <h1>Markdown</h1>
+&lt;blockquote&gt;
+    Everything should be made as simple
+    as possible, but not simpler
+&lt;/blockquote&gt;
 
-        <p>A <strong>simple</strong>, readable way to write documents that translate directly into HTML.</p>
-
-        <blockquote>Everything should be made as simple as possible, but not simpler</blockquote>
-
-        <em>Albert Einstein</em>
-    </code>
+&lt;em&gt;Albert Einstein&lt;/em&gt;</code>
+        </li>
+    </ul>
 </section>
 
-<section class="slide">
-    <h1>
-        <small>Jekyll</small>
+<section class="slide" id="16-jekyll-templates">
+    <h1 class="right">
         Templates
     </h1>
 
-    <section class="left">
-        <h1 class="code">_layouts/default.html</h1>
+    <ul class="duo biggish closer progression loose">
+        <li class="uppish">
+            <code class="prettyprint up">// _layouts/default.html
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;
+            &#123;{ page.title }}
+        &lt;/title&gt;
+    &lt;/head&gt;
 
-        <code>
-            <html>
-                <head>
-                    <title>{{ page.title }}</title>
-                </head>
+    &lt;body&gt;
+        &lt;h1&gt;
+            &#123;{ page.title }}
+        &lt;/h1&gt;
 
-                <body>
-                    <h1>{{ page.title }}</h1>
+        &#123;{content}}
+    &lt;/body&gt;
+&lt;/html&gt;
 
-                    {{content}}
-                </body>
-            </html>
-        </code>
 
-        <h2 class="code">_includes/about-me.html</h2>
+// _includes/about-me.html
+&lt;p&gt;A web developer&lt;/p&gt;
 
-        <code>
-            <p>I'm a web developer</p>
-        </code>
 
-        <h2 class="code">index.html</h2>
+// index.html
+---
+layout: default
+title: "My blog"
+---
+&lt;p&gt;Welcome to my blog&lt;/p&gt;
 
-        <code>
-            ---
-            layout: default
-            title: "My blog"
-            ---
-            <p>Welcome to my blog</p>
+&#123;% include about-me.html %}</code>
+        </li>
+        <li>
+            <code  class="prettyprint">&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;
+            My blog
+        &lt;/title&gt;
+    &lt;/head&gt;
 
-            {% include about-me.html %}
-        </code>
-    </section>
+    &lt;body&gt;
+        &lt;h1&gt;
+            My blog
+        &lt;/h1&gt;
 
-    <section class="right">
-        <h1 class="code">_side/index.html</h1>
-        <code>
-            <html>
-                <head>
-                    <title>My blog</title>
-                </head>
+        &lt;p&gt;Welcome to my blog&lt;/p&gt;
 
-                <body>
-                    <h1>My blog</h1>
-
-                    <p>Welcome to my blog</p>
-
-                    <p>I'm a web developer</p>
-                </body>
-            </html>
-        </code>
-    </section>
-</section>
-
-<section class="slide">
-    <h1>Posts</h1>
-
-    <section class="left">
-        <h1 class="code">index.html</h1>
-
-        <code>
-            ---
-            layout: default
-            title: "My blog"
-            ---
-
-            <ul>
-            {% for post in site.posts %}
-                <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-            {% endfor %}
-            </ul>
-        </code>
-
-        <h1 class="code">_posts/2013-10-09-my-first-post.md</h1>
-<!-- This is all editors will have to worry about -->
-
-        <code>
-            ---
-            layout: default
-            title: "My first post"
-            ---
-
-            This is my *very first* post.
-
-            It's quite short...
-        </code>
-    </section>
-
-    <section class="right">
-        <h1 class="code">_site/index.html</h1>
-
-        <code>
-            <html>
-                <head>
-                    <title>My blog</title>
-                </head>
-
-                <body>
-                    <h1>My blog</h1>
-
-                    <ul>
-                        <li><a href="/2013/10/09/my-first-post.html">My first post</a></li>
-                    </ul>
-                </body>
-        </code>
-
-        <h1 class="code">_site/2013/10/09/my-first-post.html</h1>
-
-        <code>
-            <html>
-                <head>
-                    <title>My first post</title>
-                </head>
-
-                <body>
-                    <h1>My first post</h1>
-
-                    <p>This is my <em>very first</em> post.</p>
-
-                    <p>It's quite short...</p>
-                </body>
-            </html>
-        </code>
-    </section>
-</section>
-
-<section class="slide">
-    <h1>A site!</h1>
-
-    <ul>
-        <li>_site = a whole blog site!</li>
-        <li>Put it anywhere, copy it, share, it</li>
+        &lt;p&gt;A web developer&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code>
+        </li>
     </ul>
+</section>
+
+<section class="slide" id="17-jekyll-posts">
+    <h1>
+        <a href="http://jekyllrb.com"><img src="images/jekyll-logo.png" style="height: 1em; margin: -0.1em 0" /></a>
+        Posts
+    </h1>
+
+    <ul class="duo biggish progression loose">
+        <li>
+            <code class="prettyprint up">// index.html
+---
+layout: default
+title: "My blog"
+---
+
+&lt;ul&gt;
+&#123;% for post in site.posts %}
+    &lt;li&gt;&lt;
+        a href="&#123;{ post.url }}"&gt;
+            &#123;{ post.title }}
+        &lt;/a&gt;
+    &lt;/li&gt;
+&#123;% endfor %}
+&lt;/ul&gt;
+
+
+// _posts/2013-10-09-my-first-post.md
+---
+layout: default
+title: "My first post"
+---
+
+This is my *very first* post.
+
+It's quite short...</code>
+        </li>
+        <li class="upper">
+            <code  class="prettyprint">// _site/index.html
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;My blog&lt;/title&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        &lt;h1&gt;My blog&lt;/h1&gt;
+
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;a href="/2013/10/09/my-first-post.html"&gt;
+                    My first post
+                &lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+
+
+// _site/2013/10/09/my-first-post.html
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;My first post&lt;/title&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        &lt;h1&gt;My first post&lt;/h1&gt;
+
+        &lt;p&gt;
+            This is my &lt;em&gt;very first&lt;/em&gt; post.
+        &lt;/p&gt;
+
+        &lt;p&gt;It's quite short...&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code>
+        </li>
+    </ul>
+</section>
+
+<section class="slide" id="18-jekyll-site">
+    <h1>
+        <a href="http://jekyllrb.com"><img src="images/jekyll-logo.png" style="height: 1em; margin: -0.1em 0" /></a>
+        A site!
+    </h1>
+
+    <p class="icon-folder-close-alt big closer">_site/</p>
+    <p>A static site</p>
 
     <!-- If you're working by yourself, this tutorial can end here. You have a site, in a folder, that you can put anywhere. -->
 </section>
 
-<section class="slide">
-    <h1>Distribution problems</h1>
+<section class="slide" id="19-github">
+    <h1>Collaboration - Github!</h1>
 
-    <ul>
-        <li>Merge with others</li>
-        <li>Non-techies?</li>
+    <ul class="duo biggish">
+        <li style="width: 20%"><img style="width: 100%" src="images/femalecodertocat.png" /></li>
+        <li style="width: 80%; margin-top: -1em"><img src="images/dashboard-with-repositories.png" /></li>
     </ul>
 </section>
 
-<section class="slide">
-    <h1>Version control</h1>
-
-    <code>
-        Hello world,
-        Robin here.
-
-        2 + 2 = 5
-    </code>
-
-    <code>
-        - Robin here
-        + Robin Winslow here
-    </code>
-
-    <code>
-        - 2 + 2 = 5
-        + 2 + 2 = 3
-    </code>
-
-    <!-- If you change a word in the heading, your friend changes a word in a paragraph, Git could merge the two -->
-</section>
-
-<section class="slide">
-    <h1>Github</h1>
-
-    <ul>
-        <li>A place to store your files and your change log</li>
-    </ul>
-
-    <!-- This is a big advantage over anything with a databases - git can't version-control a database -->
-</section>
-
-<section class="slide">
+<section class="slide" id="20-github-pages">
     <h1>Github pages</h1>
 
-    <ul>
-        <li>Free hosting!</li>
-        <li>Auto-Jekyll!</li>
-        <li>A CMS!</li>
+    <p class="big">[username].github.io</p>
+    <p>Automatic Jekyll website!</p>
+</section>
+
+<section class="slide" id="21-comments-disqus">
+    <h1>Comments?</h1>
+
+    <ul class="duo biggish">
+        <li><img class="img-icon" src="images/javascript-logo.png">JavaScript plugins</li>
+        <li><img class="img-icon" src="images/disqus.jpg" />e.g.: Disqus</li>
     </ul>
 </section>
 
-<section class="slide">
-    <h1>More...</h1>
-
-    <ul>
-        <li>Heroku</li>
-        <li>Github pages</li>
-    </ul>
-</section>
-
-<section class="slide">
-    <h1>Comments</h1>
-
-    <ul>
-        <li>Client-side</li>
-        <li>Disqus</li>
-    </ul>
-</section>
-
-<section class="slide">
-    <h1>Questions?</h1>
+<section class="slide" id="22-questions">
+    <h1 class="title">Questions?</h1>
 </section>

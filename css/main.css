@@ -42,6 +42,18 @@ body {
     padding: 2rem 2rem 2rem 2rem;
     position: absolute;
 }
+.slide h1.right {
+    right: 0;
+}
+.slide h1.title {
+    float: none;
+    width: 70%;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: static;
+    font-size: 3.5em;
+}
 
 .slide a {
     color: white;
@@ -63,7 +75,7 @@ body {
 }
 
 .biggish {
-    font-size: 1.3em;
+    font-size: 1.2em;
 }
 
 .big-icons li:before {
@@ -108,6 +120,12 @@ body {
 
 .up {
     margin-top: -4em;
+}
+.upper {
+    margin-top: -5em;
+}
+.uppish {
+    margin-top: -3.5em;
 }
 
 .slide .loose {
@@ -161,4 +179,65 @@ code {
     -moz-box-sizing: border-box;
          box-sizing: border-box;
     padding: 2em;
+    color: black;
+}
+
+.subtle {
+    color: #777;
+}
+
+.progression li {
+    position: relative;
+    overflow: visible;
+}
+
+.progression li:after {
+    content: "\f061";
+    text-decoration: inherit;
+    display: inline-block;
+    speak: none;
+    font-family: 'fontawesome';
+    position: absolute;
+    top: 2em;
+    right: -0.5em;
+}
+.progression li.uppish:after, .progression li.up:after, .progression li.upper:after {
+    top: 5em;
+}
+
+.progression li:last-child:after {
+    display: none;
+}
+
+.slide .container-icon {
+    position: relative;
+    text-align: left;
+    padding-top: 0.5em;
+    padding-left: 2em;
+}
+
+.slide .container-icon p {
+    font-size: 0.8em;
+    padding: 0.3em;
+    margin: 0;
+}
+.container-icon:before {
+    position: absolute;
+    top: -0.15em;
+    left: 0.15em;
+    font-size: 8em;
+    z-index: -1;
+    color: #777;
+    opacity: 0.5;
+}
+
+h2 {
+    color: #888;
+    margin: 0;
+    font-size: 1em;
+    text-align: left;
+}
+
+.slide h1+ul.closer, .slide h1+p.closer, .slide h1+img.closer {
+    margin-top: 2.5em;
 }
