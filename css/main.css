@@ -105,6 +105,9 @@ body {
          box-sizing: border-box;
     width: 50%;
 }
+.duo li:nth-child(2n+1) {
+    clear: left;
+}
 .trio li {
     -moz-box-sizing: border-box;
          box-sizing: border-box;
@@ -158,7 +161,9 @@ body {
 }
 
 .left:before, .right:before {
-    font-size: 1em;
+    font-size: 1.2em;
+    padding-bottom: 0;
+    line-height: 1.2;
 }
 .left:before {
     float: left;

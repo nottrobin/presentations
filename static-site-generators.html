@@ -4,12 +4,12 @@ author: Robin Winslow
 layout: presentation
 ---
 
-<section class="slide" id="0-intro">
+<section class="slide" id="1-intro">
     <h1 class="title">Static Site Generators</h1>
     <p class="alongside">For neat &amp; simple websites</p>
 </section>
 
-<section class="slide" id="1-me">
+<section class="slide" id="2-me">
     <h1>Me</h1>
 
 
@@ -22,17 +22,20 @@ layout: presentation
     </ul>
 </section>
 
-<section class="slide" id="2-ssg-intro">
-    <h1>Static site generators</h1>
+<section class="slide" id="3-ssg-intro">
+    <h1>Agenda</h1>
 
-    <ul class="trio big-icons">
-        <li class="icon-leaf">Simple</li>
-        <li class="icon-gear">Sensible</li>
-        <li class="icon-trophy">Empowering</li>
+    <ul class="duo big" style="font-size: 0.8em">
+        <li style="width: 60%" class="icon-circle-arrow-right left">Types of sites</li>
+        <li style="width: 40%" class="icon-circle-arrow-right left">Wordpress &amp;c.</li>
+        <li style="width: 60%" class="icon-circle-arrow-right left">Static sites &amp; generators</li>
+        <li style="width: 40%" class="icon-circle-arrow-right left">Jekyll</li>
+        <li style="width: 60%" class="icon-circle-arrow-right left">Hosting on Github</li>
+        <li style="width: 40%" class="icon-circle-arrow-right left">Demos</li>
     </ul>
 </section>
 
-<section class="slide" id="3-cant-do">
+<section class="slide" id="4-cant-do">
     <h1>Can't do</h1>
 
     <p class="icon-exchange alongside big">Interactive sites</p>
@@ -44,7 +47,7 @@ layout: presentation
     </ul>
 </section>
 
-<section class="slide" id="4-can-do">
+<section class="slide" id="5-can-do">
     <h1>Can do</h1>
 
     <p class="icon-info alongside big">Information sites</p>
@@ -56,7 +59,7 @@ layout: presentation
     </ul>
 </section>
 
-<section class="slide" id="5-how-to-start-a-site">
+<section class="slide" id="6-how-to-start-a-site">
     <h1>How to start a site?</h1>
 
     <ul class="duo biggish">
@@ -65,7 +68,7 @@ layout: presentation
     </ul>
 </section>
 
-<section class="slide" id="6-custom-software">
+<section class="slide" id="7-custom-software">
     <h1>Blogging software</h1>
 
     <ul class="trio biggish">
@@ -87,7 +90,7 @@ layout: presentation
     </ul>
 -->
 
-<section class="slide" id="7-custom-admins">
+<section class="slide" id="8-custom-admins">
     <h1>Custom admins</h1>
 
     <ul class="duo biggish loose">
@@ -96,7 +99,7 @@ layout: presentation
     </ul>
 </section>
 
-<section class="slide" id="8-complex-inside">
+<section class="slide" id="9-complex-inside">
     <h1>Complex inside</h1>
 
     <img src="images/complex-inside.png" />
@@ -107,7 +110,7 @@ layout: presentation
     Enough rope to hang themselves
 -->
 
-<section class="slide" id="9-static-site">
+<section class="slide" id="10-static-site">
     <h1>Alternative? Static site!</h1>
 
     <ul class="duo biggish loose">
@@ -127,7 +130,7 @@ layout: presentation
     </ul>
 </section>
 
-<section class="slide" id="10-strengths">
+<section class="slide" id="11-strengths">
     <h1>Strengths</h1>
 
     <ul class="trio biggish">
@@ -137,7 +140,7 @@ layout: presentation
     </ul>
 </section>
 
-<section class="slide" id="11-weaknesses">
+<section class="slide" id="12-weaknesses">
     <!-- for a single-page site, this really is a good idea -->
     <h1>Weaknesses</h1>
 
@@ -148,7 +151,7 @@ layout: presentation
     </ul>
 </section>
 
-<section class="slide" id="12-answer-a-generator">
+<section class="slide" id="13-answer-a-generator">
     <h1>Answer? A generator!</h1>
 
     <ul class="trio progression biggish">
@@ -158,7 +161,7 @@ layout: presentation
     </ul>
 </section>
 
-<section class="slide" id="13-jekyll">
+<section class="slide" id="14-jekyll">
     <h1><a href="http://jekyllrb.com"><img src="images/jekyll-logo.png" style="height: 1.5em; margin: -0.3em 0" /></a></h1>
 
     <ul class="trio biggish">
@@ -168,7 +171,7 @@ layout: presentation
     </ul>
 </section>
 
-<section class="slide" id="14-jekyll-basics">
+<section class="slide" id="15-jekyll-basics">
     <h1>
         <a href="http://jekyllrb.com"><img src="images/jekyll-logo.png" style="height: 1em; margin: -0.1em 0" /></a>
         Basics
@@ -188,7 +191,7 @@ layout: presentation
     </ul>
 </section>
 
-<section class="slide" id="15-jekyll-markdown">
+<section class="slide" id="16-jekyll-markdown">
     <h1>
         <a href="http://jekyllrb.com"><img src="images/jekyll-logo.png" style="height: 1em; margin: -0.1em 0" /></a>
         Markdown
@@ -227,7 +230,7 @@ into HTML.
     </ul>
 </section>
 
-<section class="slide" id="16-jekyll-templates">
+<section class="slide" id="17-jekyll-templates">
     <h1 class="right">
         Templates
     </h1>
@@ -287,7 +290,7 @@ title: "My blog"
     </ul>
 </section>
 
-<section class="slide" id="17-jekyll-posts">
+<section class="slide" id="18-jekyll-posts">
     <h1>
         <a href="http://jekyllrb.com"><img src="images/jekyll-logo.png" style="height: 1em; margin: -0.1em 0" /></a>
         Posts
@@ -303,8 +306,8 @@ title: "My blog"
 
 &lt;ul&gt;
 &#123;% for post in site.posts %}
-    &lt;li&gt;&lt;
-        a href="&#123;{ post.url }}"&gt;
+    &lt;li&gt;
+        &lt;a href="&#123;{ post.url }}"&gt;
             &#123;{ post.title }}
         &lt;/a&gt;
     &lt;/li&gt;
@@ -363,7 +366,7 @@ It's quite short...</code>
     </ul>
 </section>
 
-<section class="slide" id="18-jekyll-site">
+<section class="slide" id="19-jekyll-site">
     <h1>
         <a href="http://jekyllrb.com"><img src="images/jekyll-logo.png" style="height: 1em; margin: -0.1em 0" /></a>
         A site!
@@ -375,7 +378,7 @@ It's quite short...</code>
     <!-- If you're working by yourself, this tutorial can end here. You have a site, in a folder, that you can put anywhere. -->
 </section>
 
-<section class="slide" id="19-github">
+<section class="slide" id="20-github">
     <h1>Collaboration - Github!</h1>
 
     <ul class="duo biggish">
@@ -384,14 +387,14 @@ It's quite short...</code>
     </ul>
 </section>
 
-<section class="slide" id="20-github-pages">
+<section class="slide" id="21-github-pages">
     <h1>Github pages</h1>
 
     <p class="big">[username].github.io</p>
     <p>Automatic Jekyll website!</p>
 </section>
 
-<section class="slide" id="21-comments-disqus">
+<section class="slide" id="22-comments-disqus">
     <h1>Comments?</h1>
 
     <ul class="duo biggish">
@@ -400,6 +403,19 @@ It's quite short...</code>
     </ul>
 </section>
 
-<section class="slide" id="22-questions">
+<section class="slide" id="23-summary">
+    <h1>Summary</h1>
+
+    <ul class="duo big" style="font-size: 0.9em">
+        <li class="icon-circle-arrow-right left">Fast, secure, transparent</li>
+        <li class="icon-circle-arrow-right left">Run anywhere</li>
+        <li class="icon-circle-arrow-right left">Limited (a good thing?)</li>
+        <li class="icon-circle-arrow-right left">Many choices</li>
+        <li class="icon-circle-arrow-right left">Modest learning curve</li>
+        <li class="icon-circle-arrow-right left">Empowering?</li>
+    </ul>
+</section>
+
+<section class="slide" id="23-questions">
     <h1 class="title">Questions?</h1>
 </section>
