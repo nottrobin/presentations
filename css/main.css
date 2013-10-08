@@ -1,0 +1,164 @@
+
+body {
+    font-family: 'Open Sans';
+}
+
+.slide {
+    font-size: 3em;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+    /*transition: opacity 0.2s linear;*/
+    background-color: #1a2b32;
+    color: white;
+    width: 100%;
+    padding: 6rem 0;
+    text-align: center;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'Open Sans';
+    display: block;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before, .img-icon {
+    font-family: 'FontAwesome';
+    display: block;
+    font-size: 2em;
+    padding-bottom: 1rem;
+    text-align: center;
+    height: 1em;
+    margin: auto;
+}
+
+.slide h1 {
+    font-family: 'Alice';
+    font-weight: normal;
+    font-size: 2em;
+    max-width: 80%;
+    background-color: rgba(0,0,0,0.3);
+    float: left;
+    margin: 0;
+    margin-top: -3rem;
+    padding: 2rem 2rem 2rem 2rem;
+    position: absolute;
+}
+
+.slide a {
+    color: white;
+    text-decoration: none;
+}
+.slide a:hover {
+    color: #ccc;
+}
+
+.slide h1+ul, .slide h1+p, .slide h1+img {
+    margin-top: 3.5em;
+}
+.slide h1+ul.alongside, .slide h1+p.alongside {
+    margin-top: 1em;
+}
+
+.big {
+    font-size: 1.6em;
+}
+
+.biggish {
+    font-size: 1.3em;
+}
+
+.big-icons li:before {
+    font-size: 3em;
+}
+
+.slide h1+.big-icons {
+    margin-top: 4.5em;
+}
+
+.slide .biggish, .slide .big {
+    width: 90%;
+}
+
+.small {
+    font-size: 0.8em;
+}
+
+.slide ul, .slide p {
+    width: 80%;
+    margin: 1em auto;
+    padding: 0;
+    overflow: hidden;
+}
+.duo li {
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+    width: 50%;
+}
+.trio li {
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+    width: 33.33%;
+
+}
+.slide li {
+    list-style-type: none;
+    overflow: hidden;
+    float: left;
+    padding: 1em 0.5em;
+}
+
+.up {
+    margin-top: -4em;
+}
+
+.slide .loose {
+    overflow: visible;
+}
+
+.slide .close-bottom {
+    margin-bottom: 0;
+}
+
+.slide .close {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.slide .downer {
+    margin-bottom: 0;
+    margin-top: 2em;
+}
+.slide h1+.downer {
+    margin-top: 4em;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.left:before, .right:before {
+    font-size: 1em;
+}
+.left:before {
+    float: left;
+    margin-right: 0.5em;
+}
+.right:before {
+    float: right;
+    margin-left: 0.5em;
+}
+
+code {
+    display: block;
+    white-space: pre;
+    font-size: 0.3em;
+    text-align: left;
+    background-color: #efefef;
+    border: 3px solid #ccc;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+    padding: 2em;
+}

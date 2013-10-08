@@ -1,0 +1,113 @@
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body.deck-container {
+  overflow: hidden;
+  position: static;
+}
+
+.deck-container {
+  position: relative;
+  min-height: 100%;
+  margin: 0 auto;
+  padding: 0 48px;
+  font-size: 16px;
+  line-height: 1.25;
+  overflow: hidden;
+}
+.js .deck-container {
+  visibility: hidden;
+}
+.ready .deck-container {
+  visibility: visible;
+}
+.touch .deck-container {
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+}
+.deck-container.deck-loading {
+  display: none;
+}
+
+.slide {
+  width: auto;
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.deck-current {
+  z-index: 2;
+  opacity: 1;
+}
+
+.slide .slide {
+  visibility: hidden;
+  position: static;
+  min-height: 0;
+}
+
+.deck-child-current {
+  position: static;
+  z-index: 2;
+}
+.deck-child-current .slide {
+  visibility: hidden;
+}
+.deck-child-current .deck-previous, .deck-child-current .deck-before, .deck-child-current .deck-current {
+  visibility: visible;
+}
+
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+    -webkit-box-reflect: none !important;
+    -moz-box-reflect: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+  }
+  * :before, * :after {
+    display: none !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+  }
+
+  .slide {
+    position: static !important;
+    visibility: visible !important;
+    display: block !important;
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    -o-transform: none !important;
+    -ms-transform: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+
+  .deck-container > .slide {
+    page-break-after: always;
+  }
+
+  .deck-container {
+    width: 100% !important;
+    height: auto !important;
+    padding: 0 !important;
+    display: block !important;
+  }
+
+  script {
+    display: none;
+  }
+}

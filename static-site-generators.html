@@ -4,78 +4,74 @@ author: Robin Winslow
 layout: presentation
 ---
 
-<section class="slide">
+<section class="slide" id="1-me">
     <h1>Me</h1>
 
-    <ul>
-        <li><a href="http://twitter.com/nottrobin">@nottrobin</a> - <a href="http://robinwinslow.co.uk">robinwinslow.co.uk</a></li>
-        <li>Front- and back-end developer - @ <a href="http://hillarys.co.uk">Hillarys</a></li>
-        <li>Really quite fussy about markup</li>
+    <ul class="duo alongside">
+        <li class="icon-twitter"><a href="http://twitter.com/nottrobin">@nottrobin</a></li>
+        <li class="icon-home"><a href="http://robinwinslow.co.uk">robinwinslow.co.uk</a></li>
+    </ul>
+
+    <ul class="duo">
+        <li class="icon-building">Dev @ <a href="http://hillarys.co.uk">Hillarys</a></li>
+        <li class="icon-code">Loves markup</li>
     </ul>
 </section>
 
-<section class="slide">
-    <h1>Static site generators are</h1>
+<section class="slide" id="2-ssg-intro">
+    <h1>Static site generators</h1>
 
-    <ul>
-        <li class="icon-simple">Simple</li>
-        <li class="icon-sensible">Sensible</li>
-        <li class="icon-empowering">Empowering</li>
+    <ul class="trio big-icons">
+        <li class="icon-leaf">Simple</li>
+        <li class="icon-gear">Sensible</li>
+        <li class="icon-trophy">Empowering</li>
     </ul>
 </section>
 
-<section class="slide">
-    <h1>Consider static site generators for</h1>
+<section class="slide" id="3-cant-do">
+    <h1>Can't do</h1>
 
-    <ul>
-        <li>Blogs</li>
-        <li>News sites</li>
-        <li>Brochure sites</li>
+    <p class="icon-exchange alongside big">Interactive sites</p>
+
+    <ul class="small trio">
+        <li class="icon-stackexchange">Forums</li>
+        <li class="icon-facebook">Social networking</li>
+        <li class="icon-group">Membership</li>
     </ul>
 </section>
 
-<section class="slide">
-    <h1>Static site generators suck at</h1>
+<section class="slide" id="4-can-do">
+    <h1>Can do</h1>
 
-    <ul>
-        <li>Forums</li>
-        <li>Wikis (maybe)</li>
-        <li>Social networking</li>
-        <li>Membership permissions</li>
+    <p class="icon-info alongside big">Information sites</p>
+
+    <ul class="small trio">
+        <li class="icon-tumblr">Blogs</li>
+        <li class="icon-font">News sites</li>
+        <li class="icon-picture">Brochure sites</li>
     </ul>
 </section>
 
-<section class="slide">
-    <h1>How would you start a blog?</h1>
+<section class="slide" id="5-site-options">
+    <h1>How to start a site?</h1>
 
-    <ul>
-        <li class="icon-tumblr icon-wordpress-com">Hosted solutions</li>
-        <li class="icon-wordpress-oss icon-drupal">Custom solutions</li>
+    <ul class="duo biggish">
+        <li class="icon-tumblr">Community site</li>
+        <li class="icon-hdd">Custom software</li>
     </ul>
 </section>
 
-<section class="slide">
-    <h1>Classic website structure</h1>
+<section class="slide" id="6-custom-software">
+    <h1>Custom software</h1>
 
-    <img BROSWER-ADDRESS-BAR-DIAGRAM (robinwinslow.co.uk/an-article) />
-
-    <p>CAN HAZ HTML -></p>
-
-    <p><- HEREZ HTMLz</p>
-
-    <p>Server -> Program -> Files -> Database</p>
-
+    <ul class="trio biggish">
+        <li><img class="img-icon" src="images/wordpress-pen.png" /> Wordpress</li>
+        <li><img class="img-icon" src="images/drupal-ninja.png" /> Drupal</li>
+        <li><img class="img-icon" src="images/joomla.png" /> Joomla!</li>
+    </ul>
 </section>
 
-<section class="slide">
-    <h1>Classic blog interface</h1>
-
-    <p>WORDPRESS ADMIN AREA</p>
-
-    <p>WYSIWYG IMAGE</p>
-</section>
-
-<section class="slide">
+<!--
     <h1>Problems</h1>
 
     <ul>
@@ -85,22 +81,41 @@ layout: presentation
         <li>Potential security holes</li>
         <li>Gets slow (needs caching etc.)</li>
     </ul>
+-->
+
+<section class="slide" id="7-custom-admins">
+    <h1>Custom admins</h1>
+
+    <ul class="duo biggish loose">
+        <li><img src="images/wysiwyg.png" /></li>
+        <li class="up"><img src="images/custom-admin.png" /></li>
+    </ul>
 </section>
 
-<section class="slide">
-    <h1>
-        <small>Alternative</small>
-        Static site - flat files
-    </h1>
+<section class="slide" id="8-complex-inside">
+    <h1>Complex inside</h1>
 
-    <img BROWSER-ADDRESS-BAR-DIAGRAM (robinwinslow.co.uk/an-article) />
+    <img src="images/complex-inside.png" />
+</section>
 
-    <p>CAN HAZ HTML -></p>
-    <p><- heryago</p>
+<section class="slide" id="9-static-site">
+    <h1>Alternative? Static site!</h1>
 
-    <p>Server -> Read an-article.html</p>
-
-    <!-- a site is just a collection of HTML documents after all -->
+    <ul class="duo biggish loose">
+        <li>
+            <code class="prettyprint">&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;My blog&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Welcome!&lt;/h1&gt;
+        &lt;p&gt;It's my blog!&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code>
+        </li>
+        <li><img src="images/simple-files.png" /></li>
+    </ul>
 </section>
 
 <section class="slide">
